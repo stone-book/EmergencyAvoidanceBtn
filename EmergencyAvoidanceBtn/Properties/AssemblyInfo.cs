@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescription("ウィンドウを最小化にして、ミュートにするだけのボタンです。")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("EmergencyAvoidanceBtn")]
+[assembly: AssemblyProduct("緊急回避ボタンX")]
 [assembly: AssemblyCopyright("Copyright © Y.Ishimoto 2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

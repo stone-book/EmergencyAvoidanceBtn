@@ -100,6 +100,7 @@ namespace EmergencyAvoidanceBtn
                 setting.TopMost = this.TopMost = Properties.Settings.Default.TopMost;
                 setting.Mute = Properties.Settings.Default.Mute;
                 setting.ShortCut = (SettingInfo.KeyCombo)Properties.Settings.Default.ShortCutKey;
+                setting.SaveFormStyle = Properties.Settings.Default.SaveFormStyle;
             }
             catch (Exception ex)
             {
@@ -108,7 +109,8 @@ namespace EmergencyAvoidanceBtn
                 setting.ButtonText = this.button.Text = "緊急回避";
                 setting.TopMost = this.TopMost = true;
                 setting.Mute = true;
-                setting.ShortCut = SettingInfo.KeyCombo.WinD;                
+                setting.ShortCut = SettingInfo.KeyCombo.WinD;
+                setting.SaveFormStyle = false;
             }
             this.setting = setting;
         }
@@ -125,6 +127,8 @@ namespace EmergencyAvoidanceBtn
                 Properties.Settings.Default.TopMost = this.TopMost = setting.TopMost;
                 Properties.Settings.Default.Mute = this.setting.Mute;
                 Properties.Settings.Default.ShortCutKey = (int)this.setting.ShortCut;
+                Properties.Settings.Default.SaveFormStyle = this.setting.SaveFormStyle;
+
                 Properties.Settings.Default.Save();
             }
             catch (Exception ex)
@@ -218,5 +222,40 @@ namespace EmergencyAvoidanceBtn
         {
             this.Close();
         }
+
+        /// <summary>
+        /// フォームロード後に画面サイズを変更する
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            var formSize = Properties.Settings.Default.FormSize;
+            var desktopLocation = Properties.Settings.Default.DesktopLocation;
+
+            if (this.setting.SaveFormStyle && !formSize.IsEmpty && !desktopLocation.IsEmpty)
+            { 
+                this.Size = formSize;
+                this.DesktopLocation = desktopLocation;
+            }
+        }
+
+        /// <summary>
+        /// フォームを閉じる際に画面サイズを覚えておく
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (this.setting.SaveFormStyle)
+            {
+                Properties.Settings.Default.FormSize = this.Size;
+                Properties.Settings.Default.DesktopLocation = this.DesktopLocation;
+
+                Properties.Settings.Default.Save();
+            }
+        }
+
+
     }
 }

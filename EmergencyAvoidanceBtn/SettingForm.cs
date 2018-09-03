@@ -36,6 +36,8 @@ namespace EmergencyAvoidanceBtn
 
             this.checkBoxMute.Checked = setting.Mute;
 
+            this.checkBoxSaveFormStyle.Checked = setting.SaveFormStyle;
+
             if (setting.ShortCut == SettingInfo.KeyCombo.WinD)
             {
                 this.radioButtonWinD.Checked = true;
@@ -60,6 +62,8 @@ namespace EmergencyAvoidanceBtn
             setting.TopMost = this.checkBoxForeDisp.Checked;
 
             setting.Mute = this.checkBoxMute.Checked;
+
+            setting.SaveFormStyle = this.checkBoxSaveFormStyle.Checked;
 
             if (this.radioButtonWinD.Checked)
             {

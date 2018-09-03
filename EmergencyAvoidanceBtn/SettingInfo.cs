@@ -36,6 +36,21 @@ namespace EmergencyAvoidanceBtn
         /// </summary>
         public bool Mute;
 
+        /// <summary>
+        /// フォームのスタイルを保存するか
+        /// </summary>
+        public bool SaveFormStyle;
+
+        /// <summary>
+        /// フォームのサイズ
+        /// </summary>
+        public System.Drawing.Size FormSize;
+
+        /// <summary>
+        /// 画面の表示位置
+        /// </summary>
+        public System.Drawing.Point DesktopLocation;
+
     }
 
 }

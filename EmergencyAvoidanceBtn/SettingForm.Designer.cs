@@ -37,12 +37,13 @@
             this.checkBoxMute = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxBtnText = new System.Windows.Forms.TextBox();
+            this.checkBoxSaveFormStyle = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonOK
             // 
-            this.buttonOK.Location = new System.Drawing.Point(112, 194);
+            this.buttonOK.Location = new System.Drawing.Point(111, 218);
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.Size = new System.Drawing.Size(75, 23);
             this.buttonOK.TabIndex = 0;
@@ -52,7 +53,7 @@
             // 
             // buttonCancel
             // 
-            this.buttonCancel.Location = new System.Drawing.Point(193, 193);
+            this.buttonCancel.Location = new System.Drawing.Point(192, 217);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 1;
@@ -96,7 +97,7 @@
             // checkBoxForeDisp
             // 
             this.checkBoxForeDisp.AutoSize = true;
-            this.checkBoxForeDisp.Location = new System.Drawing.Point(12, 94);
+            this.checkBoxForeDisp.Location = new System.Drawing.Point(12, 85);
             this.checkBoxForeDisp.Name = "checkBoxForeDisp";
             this.checkBoxForeDisp.Size = new System.Drawing.Size(177, 16);
             this.checkBoxForeDisp.TabIndex = 3;
@@ -106,7 +107,7 @@
             // checkBoxMute
             // 
             this.checkBoxMute.AutoSize = true;
-            this.checkBoxMute.Location = new System.Drawing.Point(12, 126);
+            this.checkBoxMute.Location = new System.Drawing.Point(12, 116);
             this.checkBoxMute.Name = "checkBoxMute";
             this.checkBoxMute.Size = new System.Drawing.Size(183, 16);
             this.checkBoxMute.TabIndex = 3;
@@ -116,7 +117,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 158);
+            this.label1.Location = new System.Drawing.Point(12, 182);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(124, 12);
             this.label1.TabIndex = 4;
@@ -124,18 +125,29 @@
             // 
             // textBoxBtnText
             // 
-            this.textBoxBtnText.Location = new System.Drawing.Point(144, 155);
+            this.textBoxBtnText.Location = new System.Drawing.Point(143, 179);
             this.textBoxBtnText.Name = "textBoxBtnText";
             this.textBoxBtnText.Size = new System.Drawing.Size(124, 19);
             this.textBoxBtnText.TabIndex = 5;
+            // 
+            // checkBoxSaveFormStyle
+            // 
+            this.checkBoxSaveFormStyle.AutoSize = true;
+            this.checkBoxSaveFormStyle.Location = new System.Drawing.Point(12, 147);
+            this.checkBoxSaveFormStyle.Name = "checkBoxSaveFormStyle";
+            this.checkBoxSaveFormStyle.Size = new System.Drawing.Size(219, 16);
+            this.checkBoxSaveFormStyle.TabIndex = 3;
+            this.checkBoxSaveFormStyle.Text = "ボタンのウインドウサイズ、位置を記憶する";
+            this.checkBoxSaveFormStyle.UseVisualStyleBackColor = true;
             // 
             // SettingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(281, 226);
+            this.ClientSize = new System.Drawing.Size(281, 253);
             this.Controls.Add(this.textBoxBtnText);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.checkBoxSaveFormStyle);
             this.Controls.Add(this.checkBoxMute);
             this.Controls.Add(this.checkBoxForeDisp);
             this.Controls.Add(this.groupBox1);
@@ -162,5 +174,6 @@
         private System.Windows.Forms.CheckBox checkBoxMute;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxBtnText;
+        private System.Windows.Forms.CheckBox checkBoxSaveFormStyle;
     }
 }

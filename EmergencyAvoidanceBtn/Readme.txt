@@ -53,3 +53,4 @@ C:\Users\(ユーザ名)\AppData\Local\EmergencyAvoidanceBtn
 
 ・履歴
 2018/9/1 初版
+2019/9/5 プログラム画面の初期位置、サイズの記憶機能を追加
